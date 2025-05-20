@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERAIS - Digital Innovation Reimagined</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-title">HERAIS</div>
+            <div class="loader-subtitle">Digital Innovation Reimagined</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+    
+    <div class="noise-overlay"></div>
+    
+    <div class="cursor-follower"></div>
+    
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/Logo Light Mode.png" alt="HERAIS" id="site-logo" class="logo-img">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="glitch-text" data-text="HERAIS">HERAIS</h1>
+                <p class="hero-tagline">We don't just build websites. We create digital experiences that defy reality.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn primary-btn"><span>Start Your Project</span></a>
+                    <a href="#portfolio" class="btn secondary-btn">View Our Work</a>
+                </div>
+            </div>
+            <div class="hero-canvas-container">
+                <canvas id="hero-canvas"></canvas>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <!-- Desktop About Section -->
+            <div class="desktop-about">
+                <div class="section-header">
+                    <h2 class="fade-up animate-in">About Us</h2>
+                    <div class="section-line fade-up animate-in delay-100"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text from-left animate-in">
+                        <p>HERAIS is a dynamic digital solutions provider specializing in web and mobile app design and development. We help businesses transform their ideas into powerful, user-centric digital experiences that drive engagement and deliver measurable results.</p>
+                        <p>Our expert team of designers, developers, and strategists collaborates closely with clients to craft custom websites, ecommerce platforms, and mobile applications tailored to meet specific business goals.</p>
+                        <p>With a strong focus on modern technologies, intuitive user interfaces, and responsive performance, we ensure that every project is scalable, secure, and future-ready. Whether launching a startup or enhancing an established brand's online presence, HERAIS is committed to delivering innovative, high-quality digital products that stand out in today's competitive market.</p>
+                        <div class="mission-vision-row">
+                            <div class="about-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <h3>Mission</h3>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>At HERAIS our mission is to design and develop innovative digital solutions that help businesses grow, connect, and thrive in the modern world.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <h3>Vision</h3>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>To be a global leader in digital innovation, recognized for creating impactful and intelligent web and mobile solutions that shape the future of user experience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual from-right animate-in">
+                        <div class="about-tools-visual">
+                            <img src="images/tech stack.png" alt="Tech Stack" class="tech-stack-img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile About Section -->
+            <div class="mobile-about">
+                <div class="section-header">
+                    <h2 class="fade-up animate-in">About Us</h2>
+                    <div class="section-line fade-up animate-in delay-100"></div>
+                </div>
+                <div class="mobile-about-content">
+                    <div class="mobile-about-text from-bottom animate-in">
+                        <p>HERAIS is a dynamic digital solutions provider specializing in web and mobile app design and development. We help businesses transform their ideas into powerful, user-centric digital experiences that drive engagement and deliver measurable results.</p>
+                    </div>
+                    
+                    <div class="mobile-cards-container">
+                        <div class="mobile-about-card from-bottom animate-in delay-100">
+                            <h3>Our Expertise</h3>
+                            <p>Our expert team of designers, developers, and strategists collaborates closely with clients to craft custom websites, ecommerce platforms, and mobile applications tailored to meet specific business goals.</p>
+                        </div>
+                        
+                        <div class="mobile-about-card from-bottom animate-in delay-200">
+                            <h3>Our Approach</h3>
+                            <p>With a strong focus on modern technologies, intuitive user interfaces, and responsive performance, we ensure that every project is scalable, secure, and future-ready.</p>
+                        </div>
+                        
+                        <div class="mobile-about-card mission-card from-bottom animate-in delay-300">
+                            <h3>Mission</h3>
+                            <p>At HERAIS our mission is to design and develop innovative digital solutions that help businesses grow, connect, and thrive in the modern world.</p>
+                        </div>
+                        
+                        <div class="mobile-about-card vision-card from-bottom animate-in delay-400">
+                            <h3>Vision</h3>
+                            <p>To be a global leader in digital innovation, recognized for creating impactful and intelligent web and mobile solutions that shape the future of user experience.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mobile-tech-visual from-bottom animate-in delay-500">
+                        <img src="images/tech stack.png" alt="Tech Stack" class="tech-stack-img" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="values" class="section values">
+            <div class="section-header">
+                <h2 class="fade-up animate-in">Core Values</h2>
+                <div class="section-line fade-up animate-in delay-100"></div>
+            </div>
+            <div class="values-container stagger-container">
+                <div class="value-card stagger-item">
+                    <div class="value-icon innovation"></div>
+                    <h3>Innovation First</h3>
+                    <p>We embrace creativity and emerging technologies to develop forward-thinking solutions.</p>
+                </div>
+                <div class="value-card stagger-item">
+                    <div class="value-icon user-centric"></div>
+                    <h3>User-Centric Design</h3>
+                    <p>Every product we create is intuitive, accessible, and designed to enhance the user experience.</p>
+                </div>
+                <div class="value-card stagger-item">
+                    <div class="value-icon quality"></div>
+                    <h3>Quality & Precision</h3>
+                    <p>We believe in clean code, seamless performance, and elegant design — down to the last pixel.</p>
+                </div>
+                <div class="value-card stagger-item">
+                    <div class="value-icon transparency"></div>
+                    <h3>Transparency & Trust</h3>
+                    <p>Open communication, honesty, and long-term client relationships are at the core of our process.</p>
+                </div>
+                <div class="value-card stagger-item">
+                    <div class="value-icon growth"></div>
+                    <h3>Continuous Growth</h3>
+                    <p>We evolve with technology, staying curious, adaptable, and committed to lifelong learning.</p>
+                </div>
+                <div class="value-card stagger-item">
+                    <div class="value-icon impact"></div>
+                    <h3>Impact-Driven</h3>
+                    <p>Our work is meaningful. We build with purpose, aiming to add real value to businesses and users alike.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section services">
+            <div class="section-header">
+                <h2 class="fade-up animate-in">Services</h2>
+                <div class="section-line fade-up animate-in delay-100"></div>
+            </div>
+            <div class="services-container">
+                <div class="service-card from-bottom animate-in">
+                    <div class="service-icon web"></div>
+                    <h3>Web Design & Development</h3>
+                    <ul>
+                        <li>Custom Website Design</li>
+                        <li>Responsive Web Development</li>
+                        <li>E-Commerce Websites</li>
+                        <li>CMS-Based Websites</li>
+                        <li>Web Portal Development</li>
+                    </ul>
+                </div>
+                <div class="service-card from-bottom animate-in delay-200">
+                    <div class="service-icon mobile"></div>
+                    <h3>Mobile App Development</h3>
+                    <ul>
+                        <li>Native iOS & Android Apps</li>
+                        <li>Cross-Platform Development</li>
+                        <li>Progressive Web Apps</li>
+                        <li>UI/UX Design for Mobile</li>
+                        <li>App Maintenance & Updates</li>
+                    </ul>
+                </div>
+                <div class="service-card from-bottom animate-in delay-400">
+                    <div class="service-icon ecommerce"></div>
+                    <h3>E-Commerce Solutions</h3>
+                    <ul>
+                        <li>Custom Online Stores</li>
+                        <li>Shopify & WooCommerce</li>
+                        <li>Secure Payment Integration</li>
+                        <li>Inventory Management</li>
+                        <li>Product Catalog Systems</li>
+                    </ul>
+                </div>
+                <div class="service-card from-bottom animate-in delay-600">
+                    <div class="service-icon software"></div>
+                    <h3>Software Development</h3>
+                    <ul>
+                        <li>Custom Web Applications</li>
+                        <li>SaaS Product Development</li>
+                        <li>API Integration & Development</li>
+                        <li>Cloud-Based Solutions</li>
+                        <li>Data Analytics Dashboards</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="section process">
+            <div class="section-header">
+                <h2 class="fade-up animate-in">Our Process</h2>
+                <div class="section-line fade-up animate-in delay-100"></div>
+            </div>
+            <div class="process-container">
+                <div class="process-steps">
+                    <div class="process-step-card fade-up animate-in">
+                        <div class="process-step-number">01</div>
+                        <div class="process-step-content">
+                            <div class="process-step-icon discovery"></div>
+                            <h3>Discovery & Consultation</h3>
+                            <p>Understanding your vision, goals, audience, and technical requirements through research and consultation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card fade-up animate-in delay-100">
+                        <div class="process-step-number">02</div>
+                        <div class="process-step-content">
+                            <div class="process-step-icon strategy"></div>
+                            <h3>Strategy & Planning</h3>
+                            <p>Crafting a strategic plan with project timeline, technology selection, and user journey mapping.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card fade-up animate-in delay-200">
+                        <div class="process-step-number">03</div>
+                        <div class="process-step-content">
+                            <div class="process-step-icon design"></div>
+                            <h3>UI/UX Design</h3>
+                            <p>Creating wireframes, prototypes, and intuitive interfaces with multiple revision rounds.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card fade-up animate-in delay-300">
+                        <div class="process-step-number">04</div>
+                        <div class="process-step-content">
+                            <div class="process-step-icon development"></div>
+                            <h3>Development</h3>
+                            <p>Building with clean, scalable code using modern front-end and back-end technologies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card fade-up animate-in delay-400">
+                        <div class="process-step-number">05</div>
+                        <div class="process-step-content">
+                            <div class="process-step-icon testing"></div>
+                            <h3>Testing & QA</h3>
+                            <p>Ensuring flawless performance across all devices through rigorous testing and bug fixing.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card fade-up animate-in delay-500">
+                        <div class="process-step-number">06</div>
+                        <div class="process-step-content">
+                            <div class="process-step-icon launch"></div>
+                            <h3>Deployment & Launch</h3>
+                            <p>Setting up technical infrastructure and monitoring for a smooth release process.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card fade-up animate-in delay-600">
+                        <div class="process-step-number">07</div>
+                        <div class="process-step-content">
+                            <div class="process-step-icon support"></div>
+                            <h3>Maintenance & Support</h3>
+                            <p>Providing ongoing support with updates, bug fixes, and feature enhancements.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="process-step-card fade-up animate-in delay-700">
+                        <div class="process-step-number">08</div>
+                        <div class="process-step-content">
+                            <div class="process-step-icon feedback"></div>
+                            <h3>Continuous Improvement</h3>
+                            <p>Gathering feedback and analytics to optimize performance and user experience over time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section portfolio">
+            <div class="section-header">
+                <h2 class="fade-up animate-in">Portfolio</h2>
+                <div class="section-line fade-up animate-in delay-100"></div>
+            </div>
+            
+            <!-- Desktop Partners Grid -->
+            <div class="partners-container desktop-partners">
+                <div class="partners-grid">
+                    <a href="https://www.thehorizonsunlimited.com" target="_blank" rel="noopener" class="partner-logo from-bottom animate-in">
+                        <img src="images/Portfolio/1.png" alt="Horizons Unlimited" class="partner-img" loading="lazy">
+                    </a>
+                    <a href="https://www.heraishealthcare.com" target="_blank" rel="noopener" class="partner-logo from-bottom animate-in delay-100">
+                        <img src="images/Portfolio/2.png" alt="Herais Healthcare" class="partner-img" loading="lazy">
+                    </a>
+                    <a href="https://www.heraisprojects.com" target="_blank" rel="noopener" class="partner-logo from-bottom animate-in delay-200">
+                        <img src="images/Portfolio/3.png" alt="Herais Projects" class="partner-img" loading="lazy">
+                    </a>
+                    <a href="mailto:anita@peasipl.com" class="partner-logo from-bottom animate-in delay-300">
+                        <img src="images/Portfolio/4.png" alt="Prime Enterprise" class="partner-img" loading="lazy">
+                    </a>
+                    <a href="https://www.achell.com" target="_blank" rel="noopener" class="partner-logo from-bottom animate-in delay-400">
+                        <img src="images/Portfolio/5.png" alt="Achel LLC" class="partner-img" loading="lazy">
+                    </a>
+                    <a href="https://www.prime-asia.com" target="_blank" rel="noopener" class="partner-logo from-bottom animate-in delay-500">
+                        <img src="images/Portfolio/6.png" alt="Prime Asia" class="partner-img" loading="lazy">
+                    </a>
+                    <a href="https://www.herais.ca" target="_blank" rel="noopener" class="partner-logo from-bottom animate-in delay-600">
+                        <img src="images/Portfolio/7.png" alt="Herais Canada" class="partner-img" loading="lazy">
+                    </a>
+                    <a href="https://www.asna.com.sa" target="_blank" rel="noopener" class="partner-logo from-bottom animate-in delay-700">
+                        <img src="images/Portfolio/8.png" alt="ASNA" class="partner-img" loading="lazy">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile Partners Grid -->
+            <div class="partners-container mobile-partners">
+                <div class="mobile-partners-grid">
+                    <a href="https://www.thehorizonsunlimited.com" target="_blank" rel="noopener" class="mobile-partner-item from-bottom animate-in">
+                        <img src="images/Portfolio/1.png" alt="Horizons Unlimited" loading="lazy">
+                    </a>
+                    <a href="https://www.heraishealthcare.com" target="_blank" rel="noopener" class="mobile-partner-item from-bottom animate-in">
+                        <img src="images/Portfolio/2.png" alt="Herais Healthcare" loading="lazy">
+                    </a>
+                    <a href="https://www.heraisprojects.com" target="_blank" rel="noopener" class="mobile-partner-item from-bottom animate-in">
+                        <img src="images/Portfolio/3.png" alt="Herais Projects" loading="lazy">
+                    </a>
+                    <a href="mailto:anita@peasipl.com" class="mobile-partner-item from-bottom animate-in">
+                        <img src="images/Portfolio/4.png" alt="Prime Enterprise" loading="lazy">
+                    </a>
+                    <a href="https://www.achell.com" target="_blank" rel="noopener" class="mobile-partner-item from-bottom animate-in">
+                        <img src="images/Portfolio/5.png" alt="Achel LLC" loading="lazy">
+                    </a>
+                    <a href="https://www.prime-asia.com" target="_blank" rel="noopener" class="mobile-partner-item from-bottom animate-in">
+                        <img src="images/Portfolio/6.png" alt="Prime Asia" loading="lazy">
+                    </a>
+                    <a href="https://www.herais.ca" target="_blank" rel="noopener" class="mobile-partner-item from-bottom animate-in">
+                        <img src="images/Portfolio/7.png" alt="Herais Canada" loading="lazy">
+                    </a>
+                    <a href="https://www.asna.com.sa" target="_blank" rel="noopener" class="mobile-partner-item from-bottom animate-in">
+                        <img src="images/Portfolio/8.png" alt="ASNA" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="section pricing">
+            <div class="section-header">
+                <h2 class="fade-up animate-in">Our Services Pricing</h2>
+                <div class="section-line fade-up animate-in delay-100"></div>
+            </div>
+            <div class="price-table-container fade-up animate-in">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Starting Price USD</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Website Development</td>
+                            <td>Custom-designed, responsive websites built for optimal user experience and business growth</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile Apps Development</td>
+                            <td>Native and cross-platform mobile applications for iOS and Android with seamless performance</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>UI/UX</td>
+                            <td>User-centered design solutions that enhance usability, accessibility, and overall satisfaction</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>E-Commerce</td>
+                            <td>Fully-featured online stores with secure payment processing and inventory management</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Logo & Stamp Design</td>
+                            <td>Professional brand identity design including logos, business cards, and visual assets</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Api Integration</td>
+                            <td>Seamless integration of third-party services and custom API development for extended functionality</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="price-table-cta">
+                    <a href="#contact" class="btn primary-btn">Contact Us for Custom Pricing</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="section-header">
+                <h2 class="fade-up animate-in">Contact Us</h2>
+                <div class="section-line fade-up animate-in delay-100"></div>
+            </div>
+            <div class="contact-form-container">
+                <div class="contact-form-wrapper animate-in">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn submit-btn">Send Message</button>
+                        <p class="email-alternative">Or email us directly at <a href="mailto:info@heraisweb.com">info@heraisweb.com</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">HERAIS</div>
+            <div class="footer-tagline">Digital Innovation Reimagined</div>
+            <div class="footer-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#process">Process</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="legal.html">Legal</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; <span id="current-year"></span> HERAIS. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-btn" id="scrollToTop">
+        <span class="arrow-up"></span>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. Learn more in our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            </div>
+            <div class="cookie-actions">
+                <button class="cookie-btn accept-cookies" id="acceptCookies">Accept All</button>
+                <button class="cookie-btn reject-cookies" id="rejectCookies">Reject Non-Essential</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/three.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

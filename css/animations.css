@@ -1,0 +1,320 @@
+/* Animations CSS */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes reveal {
+  0% { 
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% { 
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes lineGrow {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes circlePulse {
+  0% { 
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(110, 68, 255, 0.7);
+  }
+  
+  70% { 
+    transform: scale(1);
+    box-shadow: 0 0 0 20px rgba(110, 68, 255, 0);
+  }
+  
+  100% { 
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(110, 68, 255, 0);
+  }
+}
+
+.animate-in {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.animate-in.is-visible {
+  opacity: 1;
+}
+
+.fade-up {
+  transform: translateY(30px);
+}
+
+.fade-up.is-visible {
+  transform: translateY(0);
+}
+
+.fade-left {
+  transform: translateX(-30px);
+}
+
+.fade-left.is-visible {
+  transform: translateX(0);
+}
+
+.fade-right {
+  transform: translateX(30px);
+}
+
+.fade-right.is-visible {
+  transform: translateX(0);
+}
+
+.scale-in {
+  transform: scale(0.9);
+}
+
+.scale-in.is-visible {
+  transform: scale(1);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+.delay-500 { transition-delay: 0.5s; }
+.delay-600 { transition-delay: 0.6s; }
+.delay-700 { transition-delay: 0.7s; }
+.delay-800 { transition-delay: 0.8s; }
+.delay-900 { transition-delay: 0.9s; }
+.delay-1000 { transition-delay: 1s; }
+
+/* Particle effects */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-element {
+  position: absolute;
+  background-color: rgba(110, 68, 255, 0.1);
+  border-radius: 50%;
+  filter: blur(5px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 5%;
+  background-color: rgba(110, 68, 255, 0.05);
+  animation-duration: 6s;
+}
+
+.floating-element:nth-child(2) {
+  width: 300px;
+  height: 300px;
+  top: 60%;
+  right: 10%;
+  background-color: rgba(255, 68, 170, 0.05);
+  animation-duration: 8s;
+  animation-delay: 1s;
+}
+
+.floating-element:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  left: 20%;
+  background-color: rgba(68, 221, 255, 0.05);
+  animation-duration: 7s;
+  animation-delay: 2s;
+}
+
+/* Text split animation */
+.split-text {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.split-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: reveal 0.5s forwards;
+}
+
+/* Staggered animation for multiple elements */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.stagger-container.is-visible .stagger-item:nth-child(1) { 
+  transition-delay: 0.1s; 
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-container.is-visible .stagger-item:nth-child(2) { 
+  transition-delay: 0.2s; 
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-container.is-visible .stagger-item:nth-child(3) { 
+  transition-delay: 0.3s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-container.is-visible .stagger-item:nth-child(4) { 
+  transition-delay: 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-container.is-visible .stagger-item:nth-child(5) { 
+  transition-delay: 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-container.is-visible .stagger-item:nth-child(6) { 
+  transition-delay: 0.6s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll-triggered animations */
+.from-left {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.from-right {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.from-bottom {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.from-top {
+  transform: translateY(-100px);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.scale-up {
+  transform: scale(0.7);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.6, 0.01, 0.05, 0.95);
+}
+
+.in-view.from-left,
+.in-view.from-right,
+.in-view.from-bottom,
+.in-view.from-top,
+.in-view.scale-up {
+  transform: translate(0, 0) scale(1);
+  opacity: 1;
+}
+
+/* Progress bar animation */
+.progress-bar {
+  width: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  transition: width 1s ease-out;
+  position: relative;
+}
+
+.progress-bar.animate {
+  width: 100%;
+}
+
+/* Text gradient animation */
+.text-gradient {
+  background-size: 300% 300%;
+  background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: gradient 8s ease infinite;
+} 

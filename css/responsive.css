@@ -1,0 +1,712 @@
+/* Responsive Styles */
+
+/* Large Screens (1440px and up) */
+@media screen and (min-width: 1441px) {
+  .section {
+    padding: 150px 15%;
+    padding-top: 100px; /* Reduced from 160px for better scrolling */
+  }
+  
+  /* Individual section adjustments for large screens */
+  #about, #services, #process, #portfolio, #pricing, #values, #technologies, #contact {
+    padding-top: 90px;
+  }
+  
+  .hero h1 {
+    font-size: 10rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1.8rem;
+  }
+}
+
+/* MacOS specific styles - 2 service cards per row */
+@media screen and (min-width: 768px) and (max-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), 
+       screen and (min-width: 768px) and (max-width: 1440px) and (min-resolution: 192dpi),
+       screen and (min-width: 768px) and (max-width: 1440px) and (min-device-pixel-ratio: 2),
+       screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px) and (max-width: 1440px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+    max-width: 100% !important;
+  }
+  
+  .service-card {
+    height: 100%;
+    min-height: 340px;
+  }
+}
+
+/* Alternative Mac detection method */
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  html.mac .services-container,
+  body.mac .services-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+    max-width: 100% !important;
+  }
+  
+  html.mac .service-card,
+  body.mac .service-card {
+    height: 100%;
+    min-height: 340px;
+  }
+}
+
+/* Desktop (1024px - 1440px) */
+@media screen and (max-width: 1440px) {
+  .section {
+    padding: 100px 8%;
+    padding-top: 90px; /* Reduced from 140px for better scrolling */
+  }
+  
+  /* Individual section adjustments for desktop */
+  #about, #services, #process, #portfolio, #pricing, #values, #technologies, #contact {
+    padding-top: 80px;
+  }
+  
+  .hero h1 {
+    font-size: 7rem;
+  }
+  
+  .about-content {
+    gap: 3rem;
+  }
+  
+  .tech-categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+  .section {
+    padding: 80px 5%;
+    padding-top: 80px; /* Reduced from 120px */
+  }
+  
+  /* Individual section adjustments for tablets */
+  #about, #values, #technologies {
+    padding-top: 70px;
+  }
+  
+  #services, #process, #portfolio, #pricing {
+    padding-top: 70px;
+  }
+  
+  /* Contact section */
+  #contact {
+    padding-top: 70px;
+  }
+  
+  header {
+    padding: 1.5rem 5%;
+  }
+  
+  .hero h1 {
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1.3rem;
+  }
+  
+  nav ul {
+    gap: 1.5rem;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .about-visual {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .pricing-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .contact-form-wrapper {
+    order: 2;
+    height: auto;
+    min-height: auto;
+  }
+  
+  .contact-info {
+    order: 1;
+    height: auto;
+  }
+  
+  .contact-card {
+    height: auto;
+    min-height: auto;
+  }
+  
+  .tech-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (480px - 767px) */
+@media screen and (max-width: 767px) {
+  .section {
+    padding: 60px 5%;
+    padding-top: 70px; /* Reduced from 100px */
+  }
+  
+  /* Individual section adjustments for mobile */
+  #about, #values, #technologies {
+    padding-top: 60px;
+  }
+  
+  #services, #process, #portfolio, #pricing {
+    padding-top: 60px;
+  }
+  
+  /* Contact section */
+  #contact {
+    padding-top: 60px;
+  }
+  
+  header {
+    padding: 1rem 5%;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: var(--background-dark);
+    z-index: 1000;
+    transition: right 0.3s var(--easing);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .light-mode nav {
+    background-color: var(--background-light);
+  }
+  
+  nav.open {
+    right: 0;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.3rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .about-visual {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .values-container,
+  .services-container,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .services-container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .service-card {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    max-width: none !important;
+    grid-column: 1 / -1 !important; /* Force full width */
+  }
+  
+  .service-card ul {
+    margin-top: 1.2rem;
+  }
+  
+  .service-card li {
+    margin-bottom: 0.8rem;
+  }
+  
+  .service-icon {
+    margin-bottom: 1.5rem;
+  }
+  
+  .portfolio-card {
+    height: 250px;
+  }
+  
+  .portfolio-name {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  
+  .pricing-card {
+    padding: 2rem;
+  }
+  
+  .pricing-price {
+    font-size: 2rem;
+  }
+  
+  .pricing-note {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .pricing-note p {
+    font-size: 0.95rem;
+  }
+  
+  .tech-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "step1 step2"
+      "step3 step4"
+      "step5 step6"
+      "step7 step8";
+    gap: 1rem;
+  }
+  
+  .process-steps .process-step-card:nth-child(1) { grid-area: step1; }
+  .process-steps .process-step-card:nth-child(2) { grid-area: step2; }
+  .process-steps .process-step-card:nth-child(3) { grid-area: step3; }
+  .process-steps .process-step-card:nth-child(4) { grid-area: step4; }
+  .process-steps .process-step-card:nth-child(5) { grid-area: step5; }
+  .process-steps .process-step-card:nth-child(6) { grid-area: step6; }
+  .process-steps .process-step-card:nth-child(7) { grid-area: step7; }
+  .process-steps .process-step-card:nth-child(8) { grid-area: step8; }
+  
+  .process-step-card {
+    padding: 1.2rem;
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .process-step-number {
+    font-size: 2.5rem;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .process-step-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  /* About Section Mobile Styles */
+  .desktop-about {
+    display: none;
+  }
+  
+  .mobile-about {
+    display: block;
+  }
+  
+  .mobile-about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .mobile-about-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .mobile-about-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s var(--easing), background 0.3s var(--easing);
+  }
+  
+  .mobile-about-card:active {
+    transform: scale(0.98);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .mobile-about-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+  }
+  
+  .mobile-about-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-light);
+  }
+  
+  .mobile-about-card.mission-card,
+  .mobile-about-card.vision-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  }
+  
+  .mobile-tech-visual {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .mobile-tech-visual img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+}
+
+/* Desktop and larger screens - Hide mobile about */
+@media screen and (min-width: 768px) {
+  .mobile-about {
+    display: none;
+  }
+  
+  .desktop-about {
+    display: block;
+  }
+}
+
+/* Small Mobile (320px - 479px) */
+@media screen and (max-width: 479px) {
+  .hero h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1rem;
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+  }
+  
+  .portfolio-card {
+    height: 220px;
+  }
+  
+  .portfolio-name {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+  
+  .value-card,
+  .service-card {
+    padding: 2rem 1.5rem;
+    width: 100%;
+  }
+  
+  .services-container {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+  
+  .process-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "step1"
+      "step2"
+      "step3"
+      "step4"
+      "step5"
+      "step6"
+      "step7"
+      "step8";
+    gap: 1rem;
+  }
+  
+  .process-step-card {
+    padding: 1.2rem;
+  }
+  
+  .process-step-number {
+    font-size: 2.5rem;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .process-step-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  .process-step-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pricing-price {
+    font-size: 1.8rem;
+  }
+}
+
+/* Remove all other service grid settings for mobile */
+@media screen and (max-width: 767px) {
+  /* Override any Mac-specific or responsive grid settings */
+  .services-container,
+  html.mac .services-container,
+  body.mac .services-container,
+  .services-container[class*="grid-"],
+  .services-container[style*="grid-template-columns"] {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Ensure each card takes full width */
+  .service-card,
+  html.mac .service-card,
+  body.mac .service-card {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 2rem !important;
+    max-width: none !important;
+    grid-column: 1 / -1 !important;
+  }
+}
+
+/* Landscape orientation fixes */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 500px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-tagline {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  nav.open {
+    padding: 5% 0;
+  }
+  
+  nav ul {
+    gap: 1rem;
+  }
+}
+
+/* High DPI screens */
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
+  body {
+    font-weight: 300;
+  }
+  
+  strong, b, h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+  }
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark mode colors are already the default */
+  }
+}
+
+/* Light mode preference */
+@media (prefers-color-scheme: light) {
+  body:not(.dark-mode-set) {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+  }
+  
+  body:not(.dark-mode-set) .hamburger span {
+    background-color: var(--text-dark);
+  }
+  
+  body:not(.dark-mode-set) .toggle-icon {
+    transform: translateX(26px);
+    background-color: var(--text-dark);
+  }
+  
+  body:not(.dark-mode-set) .theme-toggle {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  body:not(.dark-mode-set) .value-card,
+  body:not(.dark-mode-set) .service-card,
+  body:not(.dark-mode-set) .pricing-card {
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  body:not(.dark-mode-set) .value-card p,
+  body:not(.dark-mode-set) .service-card p {
+    color: var(--text-muted-dark);
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+  
+  header, footer, .hero-canvas-container, .contact-form-wrapper, .theme-toggle, .menu-toggle {
+    display: none;
+  }
+  
+  .section {
+    page-break-inside: avoid;
+    padding: 20px 0;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .btn {
+    border: 1px solid black;
+    padding: 5px 10px;
+    background: none;
+    color: black;
+  }
+}
+
+/* Specific MacBook Pro/Air dimensions */
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+  header {
+    height: 70px;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: 1rem;
+    z-index: 1002;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-dark);
+    padding: 100px 5% 2rem;
+    transition: right 0.3s var(--easing);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1001;
+  }
+
+  .light-mode nav {
+    background-color: var(--background-light);
+  }
+
+  nav.open {
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .theme-toggle {
+    position: absolute;
+    bottom: 2rem;
+    left: 5%;
+    margin-left: 0;
+  }
+
+  body.menu-active {
+    overflow: hidden;
+  }
+} 
