@@ -1211,4 +1211,28 @@
 
 .light-mode .mobile-partner-item img {
     filter: brightness(0.95) contrast(1.1);
+}
+
+.section.globe {
+    position: relative;
+    min-height: 600px;
+    background: linear-gradient(180deg, var(--bg-color) 0%, rgba(0,0,0,0.1) 100%);
+    overflow: hidden;
+}
+
+.globe-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .section.globe {
+        min-height: 400px;
+    }
+    
+    .globe-container {
+        height: 300px;
+    }
 } 

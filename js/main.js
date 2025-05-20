@@ -647,4 +647,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
         }
         updateThemeElements();
     }
-}); 
+});
+
+// Initialize globe
+const globeContainer = document.getElementById('globeContainer');
+if (globeContainer) {
+    const globe = new Globe(globeContainer);
+} 
