@@ -151,7 +151,7 @@ class Globe {
                 y: e.clientY - previousMousePosition.y
             };
 
-            const rotationSpeed = 0.01;
+            const rotationSpeed = 0.05;
 
             this.earth.rotation.y += toRadians(deltaMove.x * rotationSpeed);
             this.earth.rotation.x += toRadians(deltaMove.y * rotationSpeed);

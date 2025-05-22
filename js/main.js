@@ -118,17 +118,17 @@ function addEventListeners() {
         menuToggle.addEventListener('click', toggleMenu);
     }
     
-    // Mouse movement for cursor follower
-    if (cursorFollower) {
+    // Mouse movement for cursor follower - only on desktop
+    if (cursorFollower && window.innerWidth > 1023) {
         document.addEventListener('mousemove', moveCursor);
+        
+        // Links and buttons for cursor effect
+        const interactiveElements = document.querySelectorAll('a, button, .btn, .card-inner, .portfolio-item, .pricing-card');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursorFollower.classList.add('active'));
+            el.addEventListener('mouseleave', () => cursorFollower.classList.remove('active'));
+        });
     }
-    
-    // Links and buttons for cursor effect
-    const interactiveElements = document.querySelectorAll('a, button, .btn, .card-inner, .portfolio-item, .pricing-card');
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => cursorFollower && cursorFollower.classList.add('active'));
-        el.addEventListener('mouseleave', () => cursorFollower && cursorFollower.classList.remove('active'));
-    });
     
     // Navigation link clicks
     if (navLinks) {
