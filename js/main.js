@@ -327,13 +327,24 @@ function handleFormSubmit(e) {
     
     // Get form data
     const formData = new FormData(contactForm);
-    const formDataObj = Object.fromEntries(formData.entries());
     
-    // Simulate form submission
+    // Send form data to send-email.php
+    fetch('send-email.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
     showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
-    
-    // Reset form
     contactForm.reset();
+        } else {
+            throw new Error('Failed to send message');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        showNotification('Failed to send message. Please try again later.', 'error');
+    });
 }
 
 // Show notification
@@ -647,7 +658,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e)
         }
         updateThemeElements();
     }
-});
+}); 
 
 // Initialize globe
 const globeContainer = document.getElementById('globeContainer');
